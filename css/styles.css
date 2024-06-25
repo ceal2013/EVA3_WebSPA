@@ -9,7 +9,7 @@ body {
 
 /* Encabezado */
 header {
-    background-color: darkgray;
+    background-color: rgb(35, 35, 129);
     color: white;
     padding: 20px;
     text-align: center;
@@ -26,7 +26,9 @@ header img {
 
 /* Barra de navegación */
 nav.navbar {
-    background-color: rgb(26, 125, 195);
+    background-color: rgb(35, 35, 129);
+    font-size: 20px;
+    padding: 10px;
 }
 
 /* Enlaces Navegación */
