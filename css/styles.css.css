@@ -1,0 +1,96 @@
+/* Cuerpo */
+body {
+    background-color: #f2f2f2;
+}
+
+#titulohome h3 p {
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background-color: rgb(26, 125, 195);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Imagen del encabezado */
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    max-height: 150px;
+}
+
+/* Barra de navegación */
+nav.navbar {
+    background-color: rgb(26, 125, 195);
+}
+
+/* Enlaces Navegación */
+.navbar-nav .nav-link {
+    color: white;
+}
+
+#titulo-seccion {
+    border-bottom: 3px solid gray;
+}
+
+p {
+    text-align: justify;
+}
+
+section h2 {
+    text-align: center;
+    color: rgb(26, 125, 195);
+    text-shadow: 2px 2px 4px gray;
+    padding-bottom: 10px;
+}
+
+#lineaseccion {
+    border-bottom: 1px solid gray;
+}
+
+.imagen-seccion {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+#imagenseccion2 {
+    width: 200px;
+    height: 200px;
+    display: inline;
+    margin: 20px;
+}
+
+#p2 {
+    text-align: center;
+}
+
+/* Sección de Otros servicios */
+.otros-servicios {
+    text-align: left;
+}
+
+#otros-servicios-list {
+    list-style-position: inside; 
+}
+
+#otros-servicios-title {
+    margin-bottom: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: rgb(26, 125, 195);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+}
