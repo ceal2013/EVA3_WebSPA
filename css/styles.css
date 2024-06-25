@@ -49,10 +49,6 @@ nav.navbar {
     font-family: Arial, sans-serif;
 }
 
-p {
-    text-align: justify;
-}
-
 section h2 {
     text-align: center;
     color: rgb(35, 35, 129);
@@ -69,16 +65,13 @@ section h2 {
    margin: 25px auto;
 }
 
-#imagenseccion2 {
-    width: 200px;
-    height: 200px;
-    display: inline;
-    margin: 20px;
+#cajaservicios {
+    
+    text-align: center;
+    margin: auto;
+    padding: 25px;
 }
 
-#p2 {
-    text-align: center;
-}
 
 /* Sección de Otros servicios */
 .otros-servicios {
