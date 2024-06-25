@@ -28,7 +28,7 @@
                                 <a class="nav-link" href="#home">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#nosotros">Quiénes Somos</a>
+                                <a class="nav-link" href="#nosotros">Nosotros</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#servicios">Servicios</a>
@@ -143,10 +143,10 @@
                 </div>
             <br>
                 <div class="container">
-                    <div class="otros-servicios">
-                        <p id="otros-servicios-title">
+                    <div id="titulo-seccion" class="row">
                         <h2>Otros Servicios:</h2>
-                        </p>
+                    </div>
+                    <div id="otros-servicios" class="row">
                         <ul id="otros-servicios-list">
                             <li>Diseño Web</li>
                             <br>
@@ -174,36 +174,39 @@
             </section>
         </div>
         
-        <section id="contacto">
-            <h2>Contacto</h2>
-
-            <div class="container">
-            <form action="pagina_confirmacion.html" method="POST">
-                <div class="form-group">
-                    <label for="nombre" class="form-label">Ingrese su Nombre:</label>
-                    <input type="text" placeholder="Nombre" class="form-control" id="nombre" name="nombre" required>
+        <div class="container">
+            <section id="contacto">
+                
+                <div id="titulo-seccion" class="row">
+                    <h2>Contacto</h2>
                 </div>
-                <div class="form-group">
-                    <label for="apellido" class="form-label">Ingrese su Apellido:</label>
-                    <input type="text" placeholder="Apellido" class="form-control" id="apellido" name="apellido" required>
-                </div>
-                <div class="form-group">
-                    <label for="nombre" class="form-label">Ingrese su Compañia:</label>
-                    <input type="text" placeholder="Nombre Compañia (Opcional)" class="form-control" id="compania" name="compania">
-                </div>
-                <div class="form-group">
-                    <label for="fono" class="form-label">Ingrese su Teléfono:</label>
-                    <input type="tel" placeholder="Teléfono (Opcional)" class="form-control" id="fono" name="fono">
-                </div>
-                <div class="form-group">
-                    <label for="email" class="form-label">Ingrese su Email:</label>
-                    <input type="email" placeholder="Email" class="form-control" id="email" name="email" required>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-            </div>
-        </section>
+            
+                <form action="pagina_confirmacion.html" method="POST">
+                    <div class="form-group">
+                        <label for="nombre" class="form-label">Ingrese su Nombre:</label>
+                        <input type="text" placeholder="Nombre" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido" class="form-label">Ingrese su Apellido:</label>
+                        <input type="text" placeholder="Apellido" class="form-control" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre" class="form-label">Ingrese su Compañia:</label>
+                        <input type="text" placeholder="Nombre Compañia (Opcional)" class="form-control" id="compania" name="compania">
+                    </div>
+                    <div class="form-group">
+                        <label for="fono" class="form-label">Ingrese su Teléfono:</label>
+                        <input type="tel" placeholder="Teléfono (Opcional)" class="form-control" id="fono" name="fono">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Ingrese su Email:</label>
+                        <input type="email" placeholder="Email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </section>
+        </div>
         <br>
     </main>
     <br>

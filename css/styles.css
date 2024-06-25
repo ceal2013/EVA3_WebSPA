@@ -74,16 +74,24 @@ section h2 {
 
 
 /* Sección de Otros servicios */
-.otros-servicios {
+#otros-servicios {
     text-align: left;
+    margin: auto;
 }
 
 #otros-servicios-list {
     list-style-position: inside; 
+    list-style-type: disc;
 }
 
-#otros-servicios-title {
-    margin-bottom: 20px;
+#otros-servicios-list li {
+    margin: 10px;
+    font-size: 25px;
+}
+
+#otros-servicios-list p {
+    text-align: justify;
+
 }
 
 /* Estilos para el pie de página */
