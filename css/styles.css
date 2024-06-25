@@ -3,10 +3,6 @@ body {
     background-color: #f2f2f2;
 }
 
-#titulohome h3 p {
-    text-align: center;
-}
-
 /* Encabezado */
 header {
     background-color: rgb(35, 35, 129);
@@ -38,6 +34,19 @@ nav.navbar {
 
 #titulo-seccion {
     border-bottom: 3px solid gray;
+    margin: 25px auto 25px;
+}
+
+#lineaseccion {
+    border-bottom: 1px solid gray;
+    padding: 15px auto;
+}
+
+#cajatexto {
+    margin: auto;
+    padding: 50px;
+    text-align: justify;
+    font-family: Arial, sans-serif;
 }
 
 p {
@@ -46,19 +55,18 @@ p {
 
 section h2 {
     text-align: center;
-    color: rgb(26, 125, 195);
+    color: rgb(35, 35, 129);
     text-shadow: 2px 2px 4px gray;
-    padding-bottom: 10px;
-}
-
-#lineaseccion {
-    border-bottom: 1px solid gray;
+    padding: auto;
+    margin: 20px auto;
+    font-size: 40px;
 }
 
 .imagen-seccion {
    display: block;
    max-width: 100%;
    height: auto;
+   margin: 25px auto;
 }
 
 #imagenseccion2 {
