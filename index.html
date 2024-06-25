@@ -185,7 +185,7 @@
             <div id="titulo-seccion" class="row">
                 <h2>Trabaja con Nosotros</h2>
             </div>
-            <form>
+            <form id="trabajaForm" action="#" method="POST">
                 <div class="form-group">
                     <label for="nombre_trabaja" class="form-label">Nombre Completo:</label>
                     <input type="text" placeholder="Nombre Completo" class="form-control" id="nombre_trabaja" name="nombre_trabaja" required>
@@ -222,6 +222,25 @@
                 <br>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
+            <br>
+    <div id="tablaTrabajadores" class="row">
+        <h3>Registros:</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre Completo</th>
+                    <th>Correo Electrónico</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Nivel de Estudios</th>
+                    <th>Experiencia</th>
+                </tr>
+            </thead>
+            <tbody id="registrosTabla">
+                <!-- Filas generadas dinámicamente -->
+            </tbody>
+        </table>
+    </div>
         </section>
     </div>
     <br>
@@ -230,5 +249,66 @@
 <footer class="bg-dark text-light text-center py-3">
     <p>Derechos Reservados &copy; 2024 CEAL Rooms PMS</p>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const form = document.getElementById('trabajaForm');
+        const registrosTabla = document.getElementById('registrosTabla');
+        let registros = [];
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            // Validación
+            const nombre = document.getElementById('nombre_trabaja').value.trim();
+            const email = document.getElementById('email_trabaja').value.trim();
+            const telefono = document.getElementById('telefono_trabaja').value.trim();
+            const fechaNacimiento = document.getElementById('fecha_nacimiento').value;
+            const nivelEstudios = document.getElementById('nivel_estudios').value;
+            const experiencia = document.getElementById('experiencia').value.trim();
+            const terminos = document.getElementById('terminos').checked;
+    
+            if (!nombre || !email || !telefono || !fechaNacimiento || !nivelEstudios || !experiencia || !terminos) {
+                alert('Por favor, complete todos los campos y confirme los términos.');
+                return;
+            }
+    
+            // Crear un objeto para el registro
+            const registro = {
+                nombre,
+                email,
+                telefono,
+                fechaNacimiento,
+                nivelEstudios,
+                experiencia
+            };
+    
+            // Añadir el registro al array
+            registros.push(registro);
+    
+            // Actualizar la tabla
+            actualizarTabla();
+    
+            // Limpiar el formulario
+            form.reset();
+        });
+    
+        function actualizarTabla() {
+            registrosTabla.innerHTML = '';
+            registros.forEach((registro, index) => {
+                const fila = document.createElement('tr');
+    
+                fila.innerHTML = `
+                    <td>${registro.nombre}</td>
+                    <td>${registro.email}</td>
+                    <td>${registro.telefono}</td>
+                    <td>${registro.fechaNacimiento}</td>
+                    <td>${registro.nivelEstudios}</td>
+                    <td>${registro.experiencia}</td>
+                `;
+                registrosTabla.appendChild(fila);
+            });
+        }
+    });
+    </script>
 </body>
 </html>
