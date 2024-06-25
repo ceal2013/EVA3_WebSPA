@@ -5,7 +5,6 @@ body {
 
 /* Encabezado */
 header {
-    background-color: rgb(35, 35, 129);
     color: white;
     padding: 20px;
     text-align: center;
@@ -22,7 +21,6 @@ header img {
 
 /* Barra de navegación */
 nav.navbar {
-    background-color: rgb(35, 35, 129);
     font-size: 20px;
     padding: 10px;
 }
@@ -96,7 +94,7 @@ section h2 {
 
 /* Estilos para el pie de página */
 footer {
-    background-color: rgb(26, 125, 195);
+    
     color: white;
     padding: 20px;
     text-align: center;
