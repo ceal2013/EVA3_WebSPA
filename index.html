@@ -185,130 +185,70 @@
             <div id="titulo-seccion" class="row">
                 <h2>Trabaja con Nosotros</h2>
             </div>
-            <form id="trabajaForm" action="#" method="POST">
+            <br>
+            <h4>¡Forma parte de nuestra empresa!</h4>
+            <p>Rellena el siguiente formulario para postularte:</p>
+            <form id="trabajaForm">
                 <div class="form-group">
-                    <label for="nombre_trabaja" class="form-label">Nombre Completo:</label>
-                    <input type="text" placeholder="Nombre Completo" class="form-control" id="nombre_trabaja" name="nombre_trabaja" required>
+                    <label for="nombre_trabaja" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre_trabaja" required>
                 </div>
                 <div class="form-group">
-                    <label for="email_trabaja" class="form-label">Correo Electrónico:</label>
-                    <input type="email" placeholder="Correo Electrónico" class="form-control" id="email_trabaja" name="email_trabaja" required>
+                    <label for="email_trabaja" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email_trabaja" required>
                 </div>
                 <div class="form-group">
                     <label for="telefono_trabaja" class="form-label">Teléfono:</label>
-                    <input type="tel" placeholder="Teléfono" class="form-control" id="telefono_trabaja" name="telefono_trabaja" required>
+                    <input type="tel" class="form-control" id="telefono_trabaja" required>
                 </div>
                 <div class="form-group">
                     <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento:</label>
-                    <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    <input type="date" class="form-control" id="fecha_nacimiento" required>
                 </div>
                 <div class="form-group">
                     <label for="nivel_estudios" class="form-label">Nivel de Estudios:</label>
-                    <select class="form-control" id="nivel_estudios" name="nivel_estudios">
-                        <option value="secundaria">Básica</option>
-                        <option value="tecnico">Media</option>
-                        <option value="universitario">Universitario</option>
-                        <option value="postgrado">Postgrado</option>
+                    <select class="form-control" id="nivel_estudios" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Basica">Básica</option>
+                        <option value="Media">Media</option>
+                        <option value="Universitaria">Universitaria</option>
+                        <option value="Postgrado">Postgrado</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="experiencia" class="form-label">Experiencia:</label>
-                    <textarea class="form-control" id="experiencia" name="experiencia" rows="4" placeholder="Describa su experiencia"></textarea>
+                    <textarea class="form-control" id="experiencia" rows="3" required></textarea>
                 </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="terminos" name="terminos" required>
-                    <label for="terminos" class="form-check-label">Confirma sus Datos</label>
+                    <input type="checkbox" class="form-check-input" id="confirma" required>
+                    <label for="confirma" class="form-check-label">Confirmo Datos ingresados</label>
                 </div>
-                <br>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
             <br>
-    <div id="tablaTrabajadores" class="row">
-        <h3>Registros:</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Nombre Completo</th>
-                    <th>Correo Electrónico</th>
-                    <th>Teléfono</th>
-                    <th>Fecha de Nacimiento</th>
-                    <th>Nivel de Estudios</th>
-                    <th>Experiencia</th>
-                </tr>
-            </thead>
-            <tbody id="registrosTabla">
-                <!-- Filas generadas dinámicamente -->
-            </tbody>
-        </table>
-    </div>
+            <h4>Registros:</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Nivel de Estudios</th>
+                        <th>Experiencia</th>
+                    </tr>
+                </thead>
+                <tbody id="registrosTabla">
+                    <!-- Aquí se agregarán los registros -->
+                </tbody>
+            </table>
+            <button id="descargarJsonBtn" class="btn btn-success">Descargar JSON</button>
         </section>
     </div>
-    <br>
 </main>
-<br>
 <footer class="bg-dark text-light text-center py-3">
-    <p>Derechos Reservados &copy; 2024 CEAL Rooms PMS</p>
+    <p>&copy; 2024 CEAL Rooms. Todos los derechos reservados.</p>
 </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const form = document.getElementById('trabajaForm');
-        const registrosTabla = document.getElementById('registrosTabla');
-        let registros = [];
-    
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-            // Validación
-            const nombre = document.getElementById('nombre_trabaja').value.trim();
-            const email = document.getElementById('email_trabaja').value.trim();
-            const telefono = document.getElementById('telefono_trabaja').value.trim();
-            const fechaNacimiento = document.getElementById('fecha_nacimiento').value;
-            const nivelEstudios = document.getElementById('nivel_estudios').value;
-            const experiencia = document.getElementById('experiencia').value.trim();
-            const terminos = document.getElementById('terminos').checked;
-    
-            if (!nombre || !email || !telefono || !fechaNacimiento || !nivelEstudios || !experiencia || !terminos) {
-                alert('Por favor, complete todos los campos y confirme los términos.');
-                return;
-            }
-    
-            // Crear un objeto para el registro
-            const registro = {
-                nombre,
-                email,
-                telefono,
-                fechaNacimiento,
-                nivelEstudios,
-                experiencia
-            };
-    
-            // Añadir el registro al array
-            registros.push(registro);
-    
-            // Actualizar la tabla
-            actualizarTabla();
-    
-            // Limpiar el formulario
-            form.reset();
-        });
-    
-        function actualizarTabla() {
-            registrosTabla.innerHTML = '';
-            registros.forEach((registro, index) => {
-                const fila = document.createElement('tr');
-    
-                fila.innerHTML = `
-                    <td>${registro.nombre}</td>
-                    <td>${registro.email}</td>
-                    <td>${registro.telefono}</td>
-                    <td>${registro.fechaNacimiento}</td>
-                    <td>${registro.nivelEstudios}</td>
-                    <td>${registro.experiencia}</td>
-                `;
-                registrosTabla.appendChild(fila);
-            });
-        }
-    });
-    </script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
