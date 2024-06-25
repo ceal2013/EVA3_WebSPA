@@ -9,7 +9,7 @@ body {
 
 /* Encabezado */
 header {
-    background-color: rgb(26, 125, 195);
+    background-color: darkgray;
     color: white;
     padding: 20px;
     text-align: center;
