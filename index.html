@@ -223,25 +223,30 @@
                     <input type="checkbox" class="form-check-input" id="confirma" required>
                     <label for="confirma" class="form-check-label">Confirmo Datos ingresados</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary" id="enviarBtn">Enviar</button>
+                <button type="button" class="btn btn-success" id="actualizarBtn" style="display: none;">Actualizar</button>
+                <button type="button" class="btn btn-secondary" id="cancelarBtn" style="display: none;">Cancelar</button>
             </form>
             <br>
             <h4>Registros:</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Email</th>
-                        <th>Teléfono</th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>Nivel de Estudios</th>
-                        <th>Experiencia</th>
-                    </tr>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Nivel de Estudios</th>
+                            <th>Experiencia</th>
+                            <th>Acciones</th>
+                        </tr>
                 </thead>
                 <tbody id="registrosTabla">
                     <!-- Aquí se agregarán los registros -->
                 </tbody>
             </table>
+            </div>
             <button id="descargarJsonBtn" class="btn btn-success">Descargar JSON</button>
         </section>
     </div>
